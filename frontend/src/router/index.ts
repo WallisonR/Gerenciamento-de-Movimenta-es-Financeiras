@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
+import CategoryList from '@/components/categories/CategoryList.vue'
+import TransactionList from '@/components/transactions/TransactionList.vue'
 
 const routes = [
   {
@@ -15,12 +17,12 @@ const routes = [
       {
         path: 'transactions',
         name: 'transactions',
-        component: () => import('../pages/TransactionsPage.vue')
+        component: TransactionList
       },
       {
         path: 'categories',
         name: 'categories',
-        component: () => import('../pages/CategoriesPage.vue')
+        component: CategoryList
       }
     ]
   },
